@@ -6,7 +6,8 @@
     "author": "Rex omiv",
     "license": "MIT",
     "scripts": {
-        "start": "nodemon --watch '/**/*.ts' --exec 'ts-node-dev ./api/index.ts'",
+        "start": "node ./dist/index.js",
+        "dev": "nodemon --watch '/**/*.ts' --exec 'ts-node-dev ./api/index.ts'",
         "build": "tsc",
         "vercel-build": "build"
     },
