@@ -1,16 +1,17 @@
 {
     "version": 2,
+    "name": "book-v-backend",
     "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
     "builds": [
         {
-            "src": "dist/index.js",
+            "src": "api/index.ts",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "dist/index.js"
+            "dest": "api/index.ts"
         }
     ]
 }
