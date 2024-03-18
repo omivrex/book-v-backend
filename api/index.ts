@@ -11,7 +11,7 @@ admin.initializeApp({
 });
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const secretKey: string = process.env.JWT_SECRET_KEY as string; // Replace with your own secret key for JWT
 
 app.use(bodyParser.json());
