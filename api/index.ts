@@ -66,7 +66,7 @@ app.post("/api/register", async (req: Request, res: Response) => {
 
         // Return success message and access token
         const accessToken = jwt.sign({ uid: userRecord.uid }, secretKey, { expiresIn: "1h" });
-        res.status(200).json({ message: "User registered successfully", accessToken, data: userData });
+        res.status(200).json({ message: "User registered successfully!", accessToken, data: userData });
     } catch (error) {
         res.status(400).json({ message: (error as Error).message });
     }
